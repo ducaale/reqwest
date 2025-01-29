@@ -95,14 +95,11 @@ __tls = ["dep:rustls-pemfile", "tokio/io-util"]
 __rustls = ["dep:hyper-rustls", "dep:tokio-rustls", "dep:rustls", "__tls", "dep:rustls-pemfile", "dep:rustls-pki-types"]
 __rustls-ring = ["hyper-rustls?/ring", "tokio-rustls?/ring", "rustls?/ring", "quinn?/ring"]
 
-# When enabled, disable using the cached SYS_PROXIES.
-__internal_proxy_sys_no_cache = []
-
 [dependencies]
 base64 = "0.22"
 http = "1"
 url = "2.4"
-bytes = "1.0"
+bytes = "1.2"
 serde = "1.0"
 serde_urlencoded = "0.7.1"
 tower-service = "0.3"
